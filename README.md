@@ -1,11 +1,7 @@
 # MummbleBot
 
-A Discord bot that monitors TikTok accounts and posts new videos to Discord channels.
-
 ## Features
 
-- Monitor TikTok accounts for new videos
-- Automatically post new videos to configured Discord channels
 - Configurable check intervals
 - Docker support for easy deployment
 - Minecraft server integration with whitelist functionality
@@ -62,44 +58,6 @@ The bot includes Minecraft server integration with automatic whitelisting:
    - Send to specific channel: `/minecraft channel:#channel-name`
 
 The command creates an embed with server details and a "Whitelist Me" button that opens a modal for users to enter their Minecraft username.
-
-### Unraid Setup
-
-1. Create a new directory for the bot:
-```bash
-mkdir -p /path/to/mummblebot
-cd /path/to/mummblebot
-```
-
-2. Create the necessary files:
-```bash
-# Create .env file
-echo "DISCORD_TOKEN=your_token_here" > .env
-echo "TZ=your_timezone" >> .env
-
-# Download docker-compose.yml
-wget https://raw.githubusercontent.com/your-username/mummblebot/main/docker-compose.yml
-```
-
-3. Create the config directory:
-```bash
-mkdir config
-```
-
-4. Start the container:
-```bash
-docker-compose up -d
-```
-
-## Building from Source
-
-If you want to build the image yourself:
-
-```bash
-git clone https://github.com/your-username/mummblebot.git
-cd mummblebot
-docker-compose up -d --build
-```
 
 ## Environment Variables
 
