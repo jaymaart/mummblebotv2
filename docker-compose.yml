@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  discord-bot:
+    image: ${DOCKERHUB_USERNAME}/mummblebot:latest
+    container_name: mummblebot
+    restart: unless-stopped
+    environment:
+      - TZ=UTC  # Set your timezone here
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
+    user: "1000:1000"  # This should match your host user's UID:GID
+    volumes:
+      - ./config:/app/config
+    # Add your Discord token as an environment variable
+    # You'll need to create a .env file with this 
