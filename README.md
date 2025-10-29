@@ -28,15 +28,6 @@ TZ=UTC
 docker-compose pull
 docker-compose up -d
 ```
-
-### Discord Setup
-
-1. Invite the bot to your server with appropriate permissions
-2. Use the `/tiktok_config` command to configure TikTok monitoring:
-```
- /tiktok_config tiktok_username:username channel:#your-channel check_interval:300
-```
-
 #### Minecraft Server Integration
 
 The bot includes Minecraft server integration with automatic whitelisting:
